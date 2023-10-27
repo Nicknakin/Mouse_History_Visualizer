@@ -1,6 +1,7 @@
 # Moust_History_Visualizer
 
 # 🖱️ Visualize mouse pointer movement history.
+# Press the "X" button in the window to close the visualizer.
 
 # Copyright (C) 2023, Sourceduty - All Rights Reserved.
 # THE CONTENTS OF THIS PROJECT ARE PROPRIETARY.
@@ -13,8 +14,8 @@ import sys
 pygame.init()
 
 # Constants
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 1920
+SCREEN_HEIGHT = 1080
 BACKGROUND_COLOR = (0, 0, 0)
 LINE_COLOR = (255, 255, 255)
 LINE_WIDTH = 2

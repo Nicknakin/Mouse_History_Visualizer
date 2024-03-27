@@ -20,6 +20,7 @@ BACKGROUND_COLOR = (0, 0, 0)
 LINE_COLOR = (255, 255, 255)
 LINE_WIDTH = 2
 MOUSE_HISTORY = []
+MAX_HISTORY = 30
 
 # Create the screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -34,7 +35,11 @@ while running:
 
     # Get the current mouse position
     mouse_x, mouse_y = pyautogui.position()
+    mouse_x = mouse_x%1920
+    mouse_y = mouse_y%1080
     MOUSE_HISTORY.append((mouse_x, mouse_y))
+    if len(MOUSE_HISTORY) > MAX_HISTORY:
+        MOUSE_HISTORY.pop(0)
 
     # Clear the screen
     screen.fill(BACKGROUND_COLOR)
